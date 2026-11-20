@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PADELORA — sewa raket dan perlengkapan padel serta ajukan booking lapangan di Semarang.">
+<title>PADELORA — Rent. Book. Play.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#17231d;--green:#174b37;--lime:#d6f36a;--cream:#f4f2e9;--muted:#737b74;--line:#dfe2d9;--font:'DM Sans',sans-serif;--display:'Space Grotesk',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}
+header{height:78px;padding:0 6.5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #17231d18;position:sticky;top:0;background:var(--cream);z-index:5}
+.brand{font:700 20px var(--display);letter-spacing:-1px;display:flex;align-items:center;gap:8px}.mark{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--green);color:var(--lime)}.dot{color:#91b72d}
+nav{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:600}nav a{color:#5e675f}nav a:hover{color:var(--green)}.navcta{background:var(--green);color:white;padding:13px 18px;border-radius:4px}
+.hero{padding:65px 6.5% 78px;display:grid;grid-template-columns:1fr 1.02fr;gap:6%;align-items:center;min-height:610px}.eyebrow{font-size:10px;letter-spacing:2px;font-weight:700;color:#71806f}.pulse{display:inline-block;width:7px;height:7px;background:#9fca42;border-radius:50%;margin-right:8px}
+h1{font:700 clamp(58px,7vw,96px)/.98 var(--display);letter-spacing:-6px;margin:24px 0}h1 em,h2 em{font-style:normal;color:#789a39}.intro{max-width:440px;color:#69736b;font-size:15px;line-height:1.8}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;gap:20px;padding:16px 21px;font-weight:700;font-size:12px;border-radius:4px;border:1px solid transparent;cursor:pointer}.primary{background:var(--green);color:white}.outline{border-color:#c9cec4}.heroimg{height:470px;position:relative}.heroimg img{width:100%;height:100%;object-fit:cover;border-radius:5px}.tag{position:absolute;right:15px;top:15px;background:var(--lime);padding:9px 12px;font-size:9px;letter-spacing:1px;font-weight:700}.float{position:absolute;left:-28px;bottom:35px;background:white;padding:17px 20px;box-shadow:0 15px 40px #17231d20;font-size:13px;font-weight:700}.float small{display:block;color:var(--muted);font-weight:400;margin-top:4px}
+.ticker{overflow:hidden;white-space:nowrap;background:var(--lime);padding:17px 0;text-align:center;font:700 12px var(--display);letter-spacing:2px}.ticker span{margin:0 22px}
+section.content{padding:95px 6.5%}.heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}.heading h2,.feature h2,.cta h2{font:700 clamp(36px,4vw,54px)/1.08 var(--display);letter-spacing:-2px;margin:12px 0}.heading p{max-width:320px;color:var(--muted);font-size:13px;line-height:1.8}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{min-height:300px;padding:25px;display:flex;flex-direction:column;border-radius:4px;position:relative;overflow:hidden}.dark{background:var(--green);color:white}.lime{background:var(--lime)}.neutral{background:#e7e8dc}.num{font-size:9px;letter-spacing:1.5px;font-weight:700;opacity:.7}.art{font-size:100px;position:absolute;right:22px;top:42px;opacity:.16}.card h3{font:700 27px var(--display);margin:auto 0 9px}.card p{font-size:12px;line-height:1.7;max-width:240px;opacity:.75}.card a{font-size:11px;font-weight:700;margin-top:8px}
+.feature{display:grid;grid-template-columns:1fr 1fr;background:#e8e9df}.feature img{width:100%;height:100%;min-height:440px;object-fit:cover}.featurecopy{padding:70px 12%}.featurecopy p{color:#687269;font-size:13px;line-height:1.9}.checks{padding:0;list-style:none;font-size:12px;line-height:2.5;margin:22px 0}
+.cta{text-align:center;padding:90px 20px;background:var(--lime)}.cta h2{font-size:clamp(40px,5vw,65px);margin:18px 0 28px}.darkbtn{background:var(--ink);color:white}
+footer{padding:25px 6.5%;display:flex;align-items:center;justify-content:space-between;font-size:10px;color:#7b847c;gap:15px}
+@media(max-width:800px){header{padding:0 5%}nav{gap:14px}.hero{grid-template-columns:1fr;padding:50px 6%}.heroimg{height:350px;margin-left:12px}.heading{display:block}.cards{grid-template-columns:1fr 1fr}.feature{grid-template-columns:1fr}.feature img{min-height:300px;height:300px}.featurecopy{padding:50px 8%}}
+@media(max-width:540px){header{height:auto;min-height:70px;flex-wrap:wrap;padding:16px 5%}nav{width:100%;justify-content:space-between;gap:8px;margin-top:14px;font-size:11px}.navcta{padding:10px}.hero h1{font-size:62px;letter-spacing:-4px}.heroimg{height:280px}.float{left:-10px;bottom:18px}.cards{grid-template-columns:1fr}.card{min-height:260px}.heading p{margin-top:15px}footer{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header>
+<a class="brand" href="#"><span class="mark">P</span> PADELORA<span class="dot">.</span></a>
+<nav><a href="#layanan">Layanan</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a><a class="navcta" href="https://wa.me/6281234567890?text=Halo%20PADELORA%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener">WhatsApp ↗</a></nav>
+</header>
+<main>
+<section class="hero">
+<div><span class="eyebrow"><span class="pulse"></span>YOUR PADEL STARTS HERE</span><h1>Play more.<br><em>Worry less.</em></h1><p class="intro">Mau coba padel tanpa harus membeli raket? Temukan perlengkapan sewaan dan ajukan booking lapangan bersama PADELORA.</p><div class="actions"><a class="btn primary" href="#layanan">Lihat Layanan ↗</a><a class="btn outline" href="https://wa.me/6281234567890?text=Halo%20PADELORA%2C%20saya%20ingin%20booking." target="_blank" rel="noopener">Booking via WhatsApp</a></div></div>
+<div class="heroimg"><img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=1200&q=85" alt="Suasana olahraga di lapangan"><span class="tag">SEMARANG · INDONESIA</span><div class="float">🎾 &nbsp; Ready to play?<small>Rent. Book. Play.</small></div></div>
+</section>
+<div class="ticker">RENT YOUR GEAR <span>✳</span> BOOK YOUR COURT <span>✳</span> FIND YOUR GAME <span>✳</span> RENT YOUR GEAR</div>
+<section class="content" id="layanan"><div class="heading"><div><span class="eyebrow">WHAT WE OFFER</span><h2>Everything you need<br>to <em>get in the game.</em></h2></div><p>Mulai dari perlengkapan pertama hingga menemukan waktu bermain. Kami bantu sederhanakan persiapanmu.</p></div>
+<div class="cards">
+<article class="card dark"><span class="num">01 / RENTAL</span><span class="art">◒</span><h3>Gear rental</h3><p>Sewa raket dan bola padel sesuai kebutuhan bermainmu.</p><a href="https://wa.me/6281234567890?text=Halo%20PADELORA%2C%20saya%20ingin%20menyewa%20peralatan." target="_blank" rel="noopener">Tanya rental ↗</a></article>
+<article class="card lime"><span class="num">02 / BOOKING</span><span class="art">▦</span><h3>Court booking</h3><p>Ajukan jadwal lapangan melalui WhatsApp dengan praktis.</p><a href="https://wa.me/6281234567890?text=Halo%20PADELORA%2C%20saya%20ingin%20booking%20lapangan." target="_blank" rel="noopener">Ajukan booking ↗</a></article>
+<article class="card neutral"><span class="num">03 / COMMUNITY</span><span class="art">✳</span><h3>Find your game</h3><p>Temukan teman bermain dan tanyakan agenda sparring.</p><a href="https://wa.me/6281234567890?text=Halo%20PADELORA%2C%20saya%20ingin%20informasi%20sparring." target="_blank" rel="noopener">Cari sesi bermain ↗</a></article>
+</div></section>
+<section class="feature" id="tentang"><img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=1200&q=85" alt="Aktivitas olahraga raket"><div class="featurecopy"><span class="eyebrow">WHY PADELORA</span><h2>First time playing?<br><em>You're welcome.</em></h2><p>PADELORA hadir untuk membuat olahraga padel lebih mudah diakses. Tidak perlu langsung membeli perlengkapan—mulai dengan menyewa, pilih jadwal, lalu nikmati permainan.</p><ul class="checks"><li>✓ Praktis untuk pemain pemula</li><li>✓ Pilihan perlengkapan untuk disewa</li><li>✓ Pengajuan booking lewat WhatsApp</li></ul></div></section>
+<section class="cta" id="kontak"><span class="eyebrow">LET'S PLAY</span><h2>One message away<br>from your next <em>match.</em></h2><a class="btn darkbtn" href="https://wa.me/6281234567890?text=Halo%20PADELORA%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener">Hubungi PADELORA ↗</a></section>
+</main>
+<footer><a class="brand" href="#"><span class="mark">P</span> PADELORA<span class="dot">.</span></a><span>Rent. Book. Play.</span><span>© <span id="year"></span> PADELORA · Project concept</span></footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
