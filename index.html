@@ -6,45 +6,99 @@
   <title>Eksperimen Product-Market Fit</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 p-6 max-w-5xl mx-auto">
-  <header class="mb-8 border-b pb-4">
-    <span class="text-xs font-bold uppercase tracking-wider bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Eksperimen Product-Market Fit</span>
-    <h1 class="text-3xl font-bold mt-2">Pilih Layanan Kampus yang Paling Kamu Butuhkan</h1>
-    <p class="text-slate-600 mt-1">Klik pada layanan yang ingin kamu gunakan. Metrik minat dan traffic dicatat secara otomatis.</p>
-    <div id="utm-banner" class="mt-3 text-xs font-mono bg-slate-200 p-2 rounded"></div>
+<body class="bg-slate-50 text-slate-800 p-6 max-w-6xl mx-auto">
+  <header class="mb-8 border-b border-slate-200 pb-5">
+    <span class="text-xs font-bold uppercase tracking-wider bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+      Eksperimen Product-Market Fit
+    </span>
+    <h1 class="text-3xl font-bold text-slate-900 mt-3">
+      Pilih Layanan Kampus yang Paling Kamu Butuhkan
+    </h1>
+    <p class="text-slate-600 mt-1">
+      Klik pada layanan yang ingin kamu gunakan untuk membuka landing page-nya, atau berikan vote pada layanan favoritmu. Metrik minat dan traffic dicatat secara otomatis.
+    </p>
+    <div class="mt-4 flex flex-wrap items-center justify-between gap-2 bg-slate-200/80 p-3 rounded-lg text-xs font-mono text-slate-700">
+      <div id="utm-banner"></div>
+      <button onclick="resetData()" class="text-rose-600 hover:underline font-sans font-semibold cursor-pointer">
+        Reset Data Lokal
+      </button>
+    </div>
   </header>
 
-  <div id="product-grid" class="grid md:grid-cols-3 gap-5 mb-10"></div>
+  <!-- GRID 5 PRODUK -->
+  <div id="product-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10"></div>
 
-  <section class="bg-white border rounded-xl p-5 shadow-sm">
-    <h2 class="font-bold text-lg mb-3">Dasbor Metrik Minat & Traffic</h2>
+  <!-- DASBOR METRIK -->
+  <section class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm overflow-x-auto">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="font-bold text-lg text-slate-900">Dasbor Metrik Minat & Traffic</h2>
+      <span class="text-xs text-slate-500">Data tersimpan otomatis di browser</span>
+    </div>
     <table class="w-full text-sm text-left border-collapse">
       <thead>
-        <tr class="bg-slate-100 border-b">
-          <th class="p-2">Kode</th>
-          <th class="p-2">Produk</th>
-          <th class="p-2 text-right">Klik Minat</th>
-          <th class="p-2 text-right">CTR</th>
+        <tr class="bg-slate-100 border-b border-slate-200 text-slate-700">
+          <th class="p-3">Kode</th>
+          <th class="p-3">Produk</th>
+          <th class="p-3 text-right">Klik Landing Page</th>
+          <th class="p-3 text-right">CTR</th>
+          <th class="p-3 text-right">Jumlah Vote</th>
+          <th class="p-3 text-right">Share Vote</th>
         </tr>
       </thead>
-      <tbody id="metrics-table"></tbody>
+      <tbody id="metrics-table" class="divide-y divide-slate-100"></tbody>
     </table>
   </section>
 
   <script>
+    // Daftar 5 produk sesuai file aktual di repository
     const products = [
-      { id: 'P1', name: 'JasaKu Express', desc: 'Kurir instan & titip beli area kos Tembalang tarif flat Rp5.000.', tag: 'Logistik' },
-      { id: 'P2', name: 'NebengKampus', desc: 'Cari tumpangan searah ke kampus bareng mahasiswa terverifikasi.', tag: 'Mobilitas' },
-      { id: 'P3', name: 'LaundryTrack', desc: 'Jemput-antar laundry kos dengan pelacakan status cucian real-time.', tag: 'Kebutuhan Kos' },
-      { id: 'P4', name: 'SplitKatering', desc: 'Langganan makan harian mahasiswa yang bisa di-pause kapan saja.', tag: 'F&B' },
-      { id: 'P5', name: 'SewaAlatKampus', desc: 'Sewa proyektor, kamera, dan HT untuk kepanitiaan kampus.', tag: 'Event' },
-      { id: 'P6', name: 'OtomasiNusa', desc: 'Landing page berkonversi tinggi & bot auto-reply WhatsApp + rekap Google Sheets untuk UMKM.', tag: 'B2B Otomasi', url: 'otomasi-nusa.html' }
+      {
+        id: 'P1',
+        name: 'Cathering Protein',
+        desc: 'Katering meal prep tinggi protein harian diantar ke kosan sekitar Tembalang dengan takaran kalori terukur.',
+        tag: 'F&B Sehat',
+        url: 'CatheringProtein.html.html'
+      },
+      {
+        id: 'P2',
+        name: 'KlinKicks',
+        desc: 'Jasa laundry sepatu & apparel ekspres antar-jemput gratis area Tembalang dengan estimasi selesai real-time.',
+        tag: 'Perawatan Kos',
+        url: 'klinkicks.html'
+      },
+      {
+        id: 'P3',
+        name: 'OtomasiNusa',
+        desc: 'Landing page berkonversi tinggi & bot auto-reply WhatsApp + rekap Google Sheets otomatis untuk UMKM.',
+        tag: 'B2B Otomasi',
+        url: 'otomasi-nusa.html'
+      },
+      {
+        id: 'P4',
+        name: 'Padelora',
+        desc: 'Sewa raket dan perlengkapan padel serta pengajuan booking lapangan & cari teman sparring di Semarang.',
+        tag: 'Olahraga',
+        url: 'padelora-index-standalone.html'
+      },
+      {
+
+        id: 'P5',
+        name: 'TemcyLens',
+        desc: 'Self-Photo Studio privat berbasis remote shutter dan penyewaan kamera mirrorless/instan dekat UNDIP Tembalang.',
+        tag: 'Studio & Sewa Alat',
+        url: 'temcylens-landing.html'
+      }
     ];
 
+    // Catat kunjungan & parameter UTM saat halaman dibuka
     const params = new URLSearchParams(window.location.search);
-    const visits = parseInt(localStorage.getItem('total_visits') || '0', 10) + 1;
-    localStorage.setItem('total_visits', visits);
-    document.getElementById('utm-banner').textContent = `Sumber Traffic: ${params.get('utm_source') || 'organik'} | Total Kunjungan: ${visits}x`;
+    const utmSource = params.get('utm_source') || 'organik';
+    const utmCampaign = params.get('utm_campaign') || '-';
+    const visits = parseInt(localStorage.getItem('pmf_total_visits') || '0', 10) + 1;
+    localStorage.setItem('pmf_total_visits', visits);
+
+    document.getElementById('utm-banner').textContent =
+      `Sumber Traffic: ${utmSource} | Campaign: ${utmCampaign} | Total Kunjungan: ${visits}x`;
 
     function render() {
       const grid = document.getElementById('product-grid');
@@ -52,39 +106,93 @@
       grid.innerHTML = '';
       tbody.innerHTML = '';
 
+      // Hitung total seluruh vote untuk persentase share vote
+      const totalVotes = products.reduce((sum, p) => {
+        return sum + parseInt(localStorage.getItem('pmf_votes_' + p.id) || '0', 10);
+      }, 0);
+
       products.forEach(p => {
-        const clicks = parseInt(localStorage.getItem('clicks_' + p.id) || '0', 10);
+        const clicks = parseInt(localStorage.getItem('pmf_clicks_' + p.id) || '0', 10);
+        const votes = parseInt(localStorage.getItem('pmf_votes_' + p.id) || '0', 10);
+        const hasVoted = localStorage.getItem('pmf_user_voted_' + p.id) === 'true';
+
         const ctr = ((clicks / visits) * 100).toFixed(1);
-        const pageLink = p.url
-          ? `<a href="${p.url}" class="block text-center w-full mt-2 border border-blue-700 text-blue-700 hover:bg-blue-50 font-semibold py-2 px-4 rounded-lg text-sm transition">Buka Landing Page</a>`
-          : '';
+        const voteShare = totalVotes > 0 ? ((votes / totalVotes) * 100).toFixed(1) : '0.0';
+        const targetHref = encodeURI(p.url) + (window.location.search || '');
+
+        const voteBtnClass = hasVoted
+          ? 'bg-emerald-600 hover:bg-emerald-700 text-white border-emerald-600'
+          : 'bg-white hover:bg-slate-100 text-slate-800 border-slate-300';
 
         grid.innerHTML += `
-          <div class="bg-white border rounded-xl p-5 shadow-sm flex flex-col justify-between">
+          <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:border-blue-400 transition flex flex-col justify-between">
             <div>
-              <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2 py-1 rounded">${p.tag}</span>
-              <h3 class="font-bold text-lg mt-2">${p.id} - ${p.name}</h3>
-              <p class="text-sm text-slate-600 mt-1 mb-4">${p.desc}</p>
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2.5 py-1 rounded">${p.tag}</span>
+                <span class="text-xs font-mono text-slate-400">${clicks} klik · ${votes} vote</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 mt-3">${p.id} - ${p.name}</h3>
+              <p class="text-sm text-slate-600 mt-1.5 mb-5 leading-relaxed">${p.desc}</p>
             </div>
-            <div>
-              <button onclick="track('${p.id}')" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-lg text-sm transition">Saya Tertarik (${clicks})</button>
-              ${pageLink}
+            <div class="space-y-2 pt-3 border-t border-slate-100">
+              <a
+                href="${targetHref}"
+                onclick="trackClick('${p.id}')"
+                class="block text-center w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2.5 px-4 rounded-lg text-sm transition"
+              >
+                Buka Landing Page →
+              </a>
+              <button
+                onclick="toggleVote('${p.id}')"
+                class="w-full border font-semibold py-2 px-4 rounded-lg text-sm transition cursor-pointer ${voteBtnClass}"
+              >
+                ${hasVoted ? '✓ Sudah Divote' : '👍 Vote Layanan Ini'} (${votes})
+              </button>
             </div>
           </div>`;
 
         tbody.innerHTML += `
-          <tr class="border-b">
-            <td class="p-2 font-mono font-bold">${p.id}</td>
-            <td class="p-2">${p.name}</td>
-            <td class="p-2 text-right font-bold">${clicks}</td>
-            <td class="p-2 text-right font-mono">${ctr}%</td>
+          <tr class="hover:bg-slate-50">
+            <td class="p-3 font-mono font-bold text-slate-700">${p.id}</td>
+            <td class="p-3 font-semibold text-slate-900">${p.name}</td>
+            <td class="p-3 text-right font-mono">${clicks}</td>
+            <td class="p-3 text-right font-mono font-semibold text-blue-700">${ctr}%</td>
+            <td class="p-3 text-right font-mono font-bold text-emerald-700">${votes}</td>
+            <td class="p-3 text-right font-mono text-slate-600">${voteShare}%</td>
           </tr>`;
       });
     }
 
-    function track(id) {
-      localStorage.setItem('clicks_' + id, parseInt(localStorage.getItem('clicks_' + id) || '0', 10) + 1);
+    // Mencatat klik saat user membuka landing page produk
+    function trackClick(id) {
+      const current = parseInt(localStorage.getItem('pmf_clicks_' + id) || '0', 10);
+      localStorage.setItem('pmf_clicks_' + id, current + 1);
+    }
+
+    // Mencatat atau membatalkan vote minat
+    function toggleVote(id) {
+      const currentVotes = parseInt(localStorage.getItem('pmf_votes_' + id) || '0', 10);
+      const hasVoted = localStorage.getItem('pmf_user_voted_' + id) === 'true';
+
+      if (hasVoted) {
+        localStorage.setItem('pmf_votes_' + id, Math.max(0, currentVotes - 1));
+        localStorage.setItem('pmf_user_voted_' + id, 'false');
+      } else {
+        localStorage.setItem('pmf_votes_' + id, currentVotes + 1);
+        localStorage.setItem('pmf_user_voted_' + id, 'true');
+      }
       render();
+    }
+
+    function resetData() {
+      if (!confirm('Reset semua data kunjungan, klik, dan vote di browser ini?')) return;
+      localStorage.removeItem('pmf_total_visits');
+      products.forEach(p => {
+        localStorage.removeItem('pmf_clicks_' + p.id);
+        localStorage.removeItem('pmf_votes_' + p.id);
+        localStorage.removeItem('pmf_user_voted_' + p.id);
+      });
+      location.reload();
     }
 
     render();
