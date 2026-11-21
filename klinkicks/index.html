@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KlinKicks.id — Jasa Laundry Sepatu & Apparel Ekspres Antar-Jemput</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .animate-float {
+      animation: floatSlow 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Sticky Navigation Bar -->
+  <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-600/20 group-hover:scale-105 transition">
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
+        </div>
+        <span class="font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900">
+          KlinKicks<span class="text-blue-600">.id</span>
+        </span>
+      </a>
+
+      <!-- Desktop Menu Links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#daftar-harga" class="hover:text-blue-600 transition">Daftar Harga</a>
+        <a href="#cara-kerja" class="hover:text-blue-600 transition">Cara Kerja</a>
+        <a href="#order" class="hover:text-blue-600 transition">Cek Estimasi & Order</a>
+      </div>
+
+      <!-- Fast Order CTA -->
+      <div class="flex items-center gap-2">
+        <a href="#order" class="bg-blue-600 hover:bg-blue-700 active:scale-95 text-white text-sm font-bold px-4 sm:px-5 py-2.5 rounded-full transition shadow-md shadow-blue-600/20 flex items-center gap-2">
+          <i data-lucide="zap" class="w-4 h-4 fill-current"></i>
+          <span>Order Cepat</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative overflow-hidden bg-white pt-10 pb-16 sm:pt-16 sm:pb-24 border-b border-slate-100">
+    <!-- Subtle Background Accent -->
+    <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/4 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-70 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-80 h-80 bg-emerald-50 rounded-full blur-3xl opacity-70 pointer-events-none"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <!-- Left Content -->
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200/80 text-emerald-700 text-xs sm:text-sm font-bold px-3.5 py-1.5 rounded-full mb-6">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+          </span>
+          GRATIS ONGKIR ANTAR-JEMPUT (RADIUS 5 KM)
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-[52px] font-extrabold text-slate-900 leading-[1.15] tracking-tight mb-5">
+          Sepatu & Apparel Kotor? <span class="text-blue-600">Kami Jemput & Bersihkan Kilat!</span>
+        </h1>
+
+        <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
+          Solusi perawatan sepatu & apparel lokal tanpa ribet. Nggak perlu keluar rumah atau transfer di awal—cukup kirim titik lokasi, kurir kami jemput, dan bayar setelah barang kembali bersih wangi.
+        </p>
+
+        <!-- Primary & Secondary CTA -->
+        <div class="flex flex-col sm:flex-row gap-3.5 sm:gap-4 mb-10">
+          <a href="#order" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-7 py-4 rounded-2xl shadow-lg shadow-blue-600/25 transition flex items-center justify-center gap-2.5 text-base">
+            <i data-lucide="truck" class="w-5 h-5"></i>
+            <span>Jadwalkan Penjemputan</span>
+          </a>
+          <a href="#daftar-harga" class="bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-bold px-7 py-4 rounded-2xl transition flex items-center justify-center gap-2 text-base">
+            <span>Lihat Paket Harga</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Key Trust Badges -->
+        <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-6 border-t border-slate-100">
+          <div class="flex items-start gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="timer" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="font-extrabold text-slate-900 text-sm sm:text-base">3 Jam</p>
+              <p class="text-slate-500 text-xs">Fast Clean Kilat</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="font-extrabold text-slate-900 text-sm sm:text-base">100% Aman</p>
+              <p class="text-slate-500 text-xs">Sabun Khusus Bahan</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="wallet" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="font-extrabold text-slate-900 text-sm sm:text-base">COD / QRIS</p>
+              <p class="text-slate-500 text-xs">Bayar Saat Selesai</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Live Operational Status Card -->
+      <div class="lg:col-span-5">
+        <div class="animate-float bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 rounded-3xl p-6 sm:p-8 text-white shadow-2xl border border-blue-800/50 relative overflow-hidden">
+          <div class="flex items-center justify-between gap-2 mb-6">
+            <span class="bg-white/10 backdrop-blur-md text-blue-100 text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-1.5">
+              <i data-lucide="radio" class="w-3.5 h-3.5 text-emerald-400"></i> Live Operasional
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Kurir Standby
+            </span>
+          </div>
+
+          <div class="mb-6">
+            <p class="text-blue-200 text-xs uppercase tracking-wider font-semibold mb-1">Waktu Lokal Saat Ini</p>
+            <p id="live-clock" class="text-sm font-medium text-white/90">Memuat waktu...</p>
+          </div>
+
+          <h2 class="text-xl sm:text-2xl font-bold mb-2">Simulasi Estimasi Fast Clean</h2>
+          <p class="text-blue-200/90 text-sm mb-5 leading-relaxed">
+            Order paket <strong class="text-white">Fast Clean (3 Jam)</strong> sekarang, sepatu bersihmu siap diantar kembali pada:
+          </p>
+
+          <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-5 border border-white/15 mb-6">
+            <div class="flex items-center gap-2 text-xs text-emerald-300 font-bold uppercase tracking-wider mb-1">
+              <i data-lucide="clock-check" class="w-4 h-4"></i> Estimasi Selesai & Diantar
+            </div>
+            <div id="hero-estimate-time" class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
+              Menghitung waktu...
+            </div>
+          </div>
+
+          <button onclick="selectPackage('Fast Clean', 25000, 3)" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-3.5 px-5 rounded-2xl transition shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 text-sm sm:text-base">
+            <span>Kunci Slot Jemput Sekarang</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Pricing Packages Section -->
+  <section id="daftar-harga" class="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+      <span class="inline-block bg-blue-50 text-blue-600 font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-3">
+        Transparan & Terjangkau
+      </span>
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+        Pilih Paket Treatment Terbaik
+      </h2>
+      <p class="text-slate-600 text-sm sm:text-base">
+        Klik <strong>"Pilih Paket Ini"</strong> pada layanan yang kamu butuhkan untuk otomatis menghitung total biaya dan estimasi jam selesai.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1: Fast Clean -->
+      <div class="bg-white rounded-3xl p-6 border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-amber-100 text-amber-800 text-xs font-extrabold px-3 py-1 rounded-full">
+              ⚡ KILAT 3 JAM
+            </span>
+          </div>
+          <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-blue-600 transition">Fast Clean</h3>
+          <p class="text-xs text-slate-500 mt-1.5 mb-5 leading-relaxed">
+            Cuci cepat bagian luar (upper & midsole) untuk debu harian & noda ringan.
+          </p>
+          <div class="mb-6 pb-5 border-b border-slate-100">
+            <span class="text-3xl font-extrabold text-slate-900">Rp 25.000</span>
+            <span class="text-xs font-medium text-slate-500">/pasang</span>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-600 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>Cuci Upper & Midsole</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>Parfum Anti-Bakteri</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-blue-600 shrink-0 mt-0.5"></i>
+              <span>Estimasi: <strong class="text-slate-900">3 Jam</strong></span>
+            </li>
+          </ul>
+        </div>
+        <button onclick="selectPackage('Fast Clean', 25000, 3)" class="w-full py-3 px-4 bg-slate-100 hover:bg-blue-600 text-slate-800 hover:text-white font-bold rounded-2xl transition text-sm flex items-center justify-center gap-2">
+          <span>Pilih Paket Ini</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Card 2: Deep Clean (Highlighted Paling Laris) -->
+      <div class="bg-white rounded-3xl p-6 border-2 border-blue-600 shadow-xl shadow-blue-600/10 relative flex flex-col justify-between transform lg:-translate-y-2">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-extrabold px-4 py-1 rounded-full shadow-md uppercase tracking-wider whitespace-nowrap">
+          🔥 Paling Laris
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-4 mt-1">
+            <span class="bg-blue-100 text-blue-800 text-xs font-extrabold px-3 py-1 rounded-full">
+              🧼 DETAIL 24 JAM
+            </span>
+          </div>
+          <h3 class="text-xl font-extrabold text-slate-900">Deep Clean</h3>
+          <p class="text-xs text-slate-500 mt-1.5 mb-5 leading-relaxed">
+            Pembersihan menyeluruh luar & dalam untuk noda membandel & lumpur.
+          </p>
+          <div class="mb-6 pb-5 border-b border-slate-100">
+            <span class="text-3xl font-extrabold text-blue-600">Rp 40.000</span>
+            <span class="text-xs font-medium text-slate-500">/pasang</span>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-600 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>All Parts (Upper, Insole, Outsole)</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>Cuci Tali & UV Sterilization</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-blue-600 shrink-0 mt-0.5"></i>
+              <span>Estimasi: <strong class="text-slate-900">24 Jam</strong></span>
+            </li>
+          </ul>
+        </div>
+        <button onclick="selectPackage('Deep Clean', 40000, 24)" class="w-full py-3.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition shadow-md shadow-blue-600/20 text-sm flex items-center justify-center gap-2">
+          <span>Pilih Paket Ini</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Card 3: Apparel Express -->
+      <div class="bg-white rounded-3xl p-6 border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-purple-100 text-purple-800 text-xs font-extrabold px-3 py-1 rounded-full">
+              👕 APPAREL 6 JAM
+            </span>
+          </div>
+          <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-blue-600 transition">Apparel Express</h3>
+          <p class="text-xs text-slate-500 mt-1.5 mb-5 leading-relaxed">
+            Perawatan khusus Jaket, Hoodie, Tas, atau Topi tanpa merusak serat kain.
+          </p>
+          <div class="mb-6 pb-5 border-b border-slate-100">
+            <span class="text-3xl font-extrabold text-slate-900">Rp 30.000</span>
+            <span class="text-xs font-medium text-slate-500">/item</span>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-600 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>Jaket / Hoodie / Tas / Topi</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>Fabric Safe & Steam Finishing</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-blue-600 shrink-0 mt-0.5"></i>
+              <span>Estimasi: <strong class="text-slate-900">6 Jam</strong></span>
+            </li>
+          </ul>
+        </div>
+        <button onclick="selectPackage('Apparel Express', 30000, 6)" class="w-full py-3 px-4 bg-slate-100 hover:bg-blue-600 text-slate-800 hover:text-white font-bold rounded-2xl transition text-sm flex items-center justify-center gap-2">
+          <span>Pilih Paket Ini</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Card 4: Unyellowing + Deep -->
+      <div class="bg-white rounded-3xl p-6 border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3 py-1 rounded-full">
+              ✨ RESTORASI 48 JAM
+            </span>
+          </div>
+          <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-blue-600 transition">Unyellowing + Deep</h3>
+          <p class="text-xs text-slate-500 mt-1.5 mb-5 leading-relaxed">
+            Memutihkan kembali midsole karet yang menguning akibat oksidasi + Deep Clean.
+          </p>
+          <div class="mb-6 pb-5 border-b border-slate-100">
+            <span class="text-3xl font-extrabold text-slate-900">Rp 65.000</span>
+            <span class="text-xs font-medium text-slate-500">/pasang</span>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-600 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>Termasuk Paket Deep Clean</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              <span>Whitening Midsole Oksidasi</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-blue-600 shrink-0 mt-0.5"></i>
+              <span>Estimasi: <strong class="text-slate-900">48 Jam</strong></span>
+            </li>
+          </ul>
+        </div>
+        <button onclick="selectPackage('Unyellowing + Deep', 65000, 48)" class="w-full py-3 px-4 bg-slate-100 hover:bg-blue-600 text-slate-800 hover:text-white font-bold rounded-2xl transition text-sm flex items-center justify-center gap-2">
+          <span>Pilih Paket Ini</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Step How It Works Section -->
+  <section id="cara-kerja" class="bg-slate-900 text-white py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-block bg-blue-500/20 text-blue-300 font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-3 border border-blue-400/20">
+          Alur Hyper-Local Praktis
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-3">
+          Cara Kerja Tanpa Ribet
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Tidak perlu download aplikasi atau registrasi akun yang rumit. Cukup 3 langkah mudah dari lokasimu.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Step 1 -->
+        <div class="bg-slate-800/70 backdrop-blur-sm p-7 rounded-3xl border border-slate-700/80 relative">
+          <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white font-extrabold text-lg flex items-center justify-center mb-5 shadow-lg shadow-blue-600/30">
+            1
+          </div>
+          <h3 class="text-xl font-bold mb-2.5">Isi Form & Share Lokasi</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Pilih paket laundry, cek estimasi waktu selesai otomatis, lalu klik tombol GPS untuk mengirim titik lokasi penjemputan langsung ke WhatsApp.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-slate-800/70 backdrop-blur-sm p-7 rounded-3xl border border-slate-700/80 relative">
+          <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white font-extrabold text-lg flex items-center justify-center mb-5 shadow-lg shadow-blue-600/30">
+            2
+          </div>
+          <h3 class="text-xl font-bold mb-2.5">Kurir Jemput & Proses</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Kurir lokal kami meluncur ke titik lokasimu dalam 30 menit, lalu sepatu atau apparel langsung ditangani teknisi berpengalaman sesuai paket.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-slate-800/70 backdrop-blur-sm p-7 rounded-3xl border border-slate-700/80 relative">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500 text-slate-950 font-extrabold text-lg flex items-center justify-center mb-5 shadow-lg shadow-emerald-500/30">
+            3
+          </div>
+          <h3 class="text-xl font-bold mb-2.5">Diantar Bersih & Bayar COD</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Pesanan diantar kembali tepat waktu dalam keadaan bersih, kering, dan wangi. Pembayaran fleksibel via Tunai atau Scan QRIS kurir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Pickup Order Form & Real-Time Estimator -->
+  <section id="order" class="py-16 sm:py-24 max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="bg-white rounded-3xl shadow-2xl shadow-slate-200/80 border border-slate-200 overflow-hidden">
+      <!-- Form Header -->
+      <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-6 sm:p-10 text-white">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
+          <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full">
+            Formulir Penjemputan Lokal
+          </span>
+          <span class="text-xs text-blue-100 font-medium flex items-center gap-1">
+            <i data-lucide="shield" class="w-3.5 h-3.5"></i> Tanpa Payment Gateway / Tanpa DP
+          </span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+          Cek Estimasi & Jadwalkan Jemput
+        </h2>
+        <p class="text-blue-100 text-sm mt-1.5">
+          Lengkapi detail di bawah ini. Total biaya dan jam selesai dihitung otomatis secara real-time.
+        </p>
+      </div>
+
+      <!-- Form Body -->
+      <form id="orderForm" onsubmit="handleOrderSubmit(event)" class="p-6 sm:p-10 space-y-6">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <!-- Customer Name -->
+          <div>
+            <label for="custName" class="block text-sm font-bold text-slate-700 mb-2">
+              Nama Lengkap <span class="text-red-500">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
+                <i data-lucide="user" class="w-4 h-4"></i>
+              </span>
+              <input type="text" id="custName" required placeholder="Contoh: Raka Pratama"
+                class="w-full pl-10 pr-4 py-3.5 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none text-sm font-medium transition">
+            </div>
+          </div>
+
+          <!-- Package Selector -->
+          <div>
+            <label for="packageSelect" class="block text-sm font-bold text-slate-700 mb-2">
+              Pilih Paket Layanan <span class="text-red-500">*</span>
+            </label>
+            <div class="relative">
+              <select id="packageSelect" onchange="calculateEstimate()"
+                class="w-full px-4 py-3.5 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none text-sm font-semibold bg-white transition">
+                <option value="Fast Clean|25000|3">Fast Clean — Rp 25.000 (3 Jam)</option>
+                <option value="Deep Clean|40000|24" selected>Deep Clean — Rp 40.000 (24 Jam)</option>
+                <option value="Apparel Express|30000|6">Apparel Express — Rp 30.000 (6 Jam)</option>
+                <option value="Unyellowing + Deep|65000|48">Unyellowing + Deep — Rp 65.000 (48 Jam)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <!-- Item Quantity (1-20) -->
+          <div>
+            <label for="itemQty" class="block text-sm font-bold text-slate-700 mb-2">
+              Jumlah Sepatu / Item (1–20) <span class="text-red-500">*</span>
+            </label>
+            <div class="flex items-center gap-2">
+              <button type="button" onclick="adjustQty(-1)" class="w-12 h-12 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center transition">
+                <i data-lucide="minus" class="w-4 h-4"></i>
+              </button>
+              <input type="number" id="itemQty" min="1" max="20" value="1" oninput="calculateEstimate()" required
+                class="w-full text-center py-3 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none text-base font-extrabold">
+              <button type="button" onclick="adjustQty(1)" class="w-12 h-12 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center transition">
+                <i data-lucide="plus" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <p id="qtyNote" class="text-[11px] text-slate-500 mt-1.5">
+              *Gratis tambahan waktu hingga 3 pasang. Di atas 3 pasang +1 jam/item.
+            </p>
+          </div>
+
+          <!-- Payment Method -->
+          <div>
+            <label for="paymentMethod" class="block text-sm font-bold text-slate-700 mb-2">
+              Metode Pembayaran (Saat Selesai)
+            </label>
+            <select id="paymentMethod"
+              class="w-full px-4 py-3.5 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none text-sm font-semibold bg-white transition">
+              <option value="COD Tunai saat diantar">COD Tunai (Bayar saat barang diantar)</option>
+              <option value="Scan QRIS saat diantar">Scan QRIS Kurir (Saat barang diantar)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Location & Geolocation GPS -->
+        <div class="bg-slate-50/80 p-5 rounded-2xl border border-slate-200/80">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <label for="custAddress" class="block text-sm font-bold text-slate-700">
+              Alamat Lengkap & Patokan Penjemputan <span class="text-red-500">*</span>
+            </label>
+            <button type="button" onclick="getLocation()" id="gpsBtn"
+              class="inline-flex items-center gap-1.5 text-xs font-extrabold bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl shadow-sm transition">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+              <span>Ambil Titik Lokasi GPS Saya</span>
+            </button>
+          </div>
+
+          <textarea id="custAddress" rows="3" required placeholder="Contoh: Jl. Pandanaran No. 45, Kost Eksklusif Putra (Pagar Hitam depan minimarket)"
+            class="w-full px-4 py-3 rounded-2xl border border-slate-300 bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none text-sm transition"></textarea>
+
+          <input type="hidden" id="gpsLink" value="">
+          <div id="gpsStatus" class="mt-2 flex items-center gap-1.5 text-xs text-slate-500">
+            <i data-lucide="info" class="w-3.5 h-3.5 text-blue-600 shrink-0"></i>
+            <span>Klik tombol GPS di atas agar kurir otomatis menerima tautan Google Maps lokasimu.</span>
+          </div>
+        </div>
+
+        <!-- Live Calculation Summary Box -->
+        <div class="bg-gradient-to-br from-blue-50 to-slate-50 border-2 border-blue-200/80 rounded-2xl p-5 sm:p-6">
+          <div class="grid sm:grid-cols-2 gap-5 items-center">
+            <div>
+              <div class="flex items-center gap-1.5 text-xs font-extrabold text-blue-700 uppercase tracking-wider mb-1">
+                <i data-lucide="calendar-clock" class="w-4 h-4"></i> Estimasi Waktu Selesai
+              </div>
+              <p id="estTimeOutput" class="text-base sm:text-lg font-extrabold text-slate-900">
+                Menghitung...
+              </p>
+              <p id="estDurationBadge" class="inline-block mt-1.5 text-[11px] font-bold bg-blue-100 text-blue-800 px-2.5 py-0.5 rounded-md">
+                Durasi pengerjaan: 24 Jam
+              </p>
+            </div>
+
+            <div class="sm:text-right border-t sm:border-t-0 pt-4 sm:pt-0 border-blue-200/60">
+              <span class="text-xs font-extrabold text-slate-500 uppercase tracking-wider">
+                Total Estimasi Biaya
+              </span>
+              <p id="estPriceOutput" class="text-2xl sm:text-3xl font-extrabold text-blue-600 mt-0.5">
+                Rp 40.000
+              </p>
+              <p class="text-xs font-bold text-emerald-600 mt-1 flex sm:justify-end items-center gap-1">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i> Gratis Ongkir Antar-Jemput
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp Order Submit Button -->
+        <button type="submit"
+          class="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-[0.99] text-white font-extrabold py-4 px-6 rounded-2xl shadow-lg shadow-emerald-600/25 transition flex items-center justify-center gap-2.5 text-base">
+          <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+          <span>Pesan & Jadwalkan Jemput via WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+        </div>
+        <span class="font-extrabold text-lg text-slate-900">KlinKicks<span class="text-blue-600">.id</span></span>
+      </div>
+      <p class="text-xs sm:text-sm text-slate-500">
+        Jasa Laundry Sepatu & Apparel Ekspres Antar-Jemput • Buka Setiap Hari 08.00 – 21.00 WIB
+      </p>
+    </div>
+  </footer>
+
+  <!-- Confirmation Preview Modal (For Testing & Direct WhatsApp Launch) -->
+  <div id="waModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl border border-slate-100 transform transition-all">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
+            <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-extrabold text-slate-900 text-lg">Pesanan Siap Dikirim!</h3>
+            <p class="text-xs text-slate-500">Pratinjau format pesan WhatsApp Admin</p>
+          </div>
+        </div>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 p-1.5 rounded-xl hover:bg-slate-100">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Formatted WhatsApp Message Preview -->
+      <div class="bg-emerald-50/70 border border-emerald-200 rounded-2xl p-4 mb-5">
+        <pre id="waPreviewText" class="text-xs text-slate-800 whitespace-pre-wrap font-sans leading-relaxed"></pre>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-2.5">
+        <a id="waDirectLink" href="#" target="_blank" rel="noopener noreferrer"
+          class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition">
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+          <span>Buka WhatsApp Sekarang</span>
+        </a>
+        <button onclick="copyOrderText()" id="copyBtn"
+          class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-1.5 transition">
+          <i data-lucide="copy" class="w-4 h-4"></i>
+          <span>Salin Teks</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Format Currency in IDR
+    function formatRupiah(amount) {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0
+      }).format(amount);
+    }
+
+    // Format Estimated Finish Date & Time in Indonesian (WIB)
+    function getFormattedFinishTime(hoursToAdd) {
+      const now = new Date();
+      const finish = new Date(now.getTime() + hoursToAdd * 60 * 60 * 1000);
+      const options = {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      };
+      return finish.toLocaleDateString('id-ID', options).replace('.', ':') + ' WIB';
+    }
+
+    // Update Hero Live Clock & Fast Clean Estimate
+    function updateLiveHero() {
+      const now = new Date();
+      const clockOptions = {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      };
+      const clockEl = document.getElementById('live-clock');
+      const heroEstEl = document.getElementById('hero-estimate-time');
+
+      if (clockEl) {
+        clockEl.innerText = now.toLocaleDateString('id-ID', clockOptions).replace(/\./g, ':') + ' WIB';
+      }
+      if (heroEstEl) {
+        heroEstEl.innerText = getFormattedFinishTime(3);
+      }
+    }
+
+    // Adjust Quantity via +/- buttons
+    function adjustQty(delta) {
+      const qtyInput = document.getElementById('itemQty');
+      let currentVal = parseInt(qtyInput.value) || 1;
+      let newVal = Math.min(20, Math.max(1, currentVal + delta));
+      qtyInput.value = newVal;
+      calculateEstimate();
+    }
+
+    // Select Package from Pricing Cards & Scroll to Form
+    function selectPackage(name, price, hours) {
+      const select = document.getElementById('packageSelect');
+      select.value = `${name}|${price}|${hours}`;
+      calculateEstimate();
+      document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Calculate Real-Time Price & Finish Time
+    function calculateEstimate() {
+      const packageVal = document.getElementById('packageSelect').value;
+      const [pkgName, priceStr, hoursStr] = packageVal.split('|');
+
+      const qtyInput = document.getElementById('itemQty');
+      let qty = parseInt(qtyInput.value) || 1;
+      if (qty < 1) qty = 1;
+      if (qty > 20) {
+        qty = 20;
+        qtyInput.value = 20;
+      }
+
+      const basePrice = parseInt(priceStr);
+      const baseHours = parseInt(hoursStr);
+
+      // Add +1 hour per extra item above 3 items
+      const extraHours = qty > 3 ? (qty - 3) : 0;
+      const totalHours = baseHours + extraHours;
+      const totalPrice = basePrice * qty;
+
+      document.getElementById('estPriceOutput').innerText = formatRupiah(totalPrice);
+      document.getElementById('estTimeOutput').innerText = getFormattedFinishTime(totalHours);
+      document.getElementById('estDurationBadge').innerText =
+        extraHours > 0
+          ? `Durasi: ${totalHours} Jam (${baseHours} jam + ${extraHours} jam antrean >3 item)`
+          : `Durasi pengerjaan: ${totalHours} Jam`;
+    }
+
+    // Geolocation GPS Capture with Fallback Simulation
+    function getLocation() {
+      const statusEl = document.getElementById('gpsStatus');
+      const gpsBtn = document.getElementById('gpsBtn');
+      const gpsLinkInput = document.getElementById('gpsLink');
+
+      gpsBtn.disabled = true;
+      statusEl.innerHTML = `<span class="text-blue-600 font-semibold">⏳ Mendeteksi titik koordinat GPS perangkat...</span>`;
+
+      if (!navigator.geolocation) {
+        applyFallbackLocation();
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude.toFixed(6);
+          const lng = position.coords.longitude.toFixed(6);
+          const mapsUrl = `https://www.google.com/maps?q=${lat},${lng}`;
+          gpsLinkInput.value = mapsUrl;
+
+          statusEl.innerHTML = `
+            <span class="text-emerald-700 font-bold flex items-center gap-1">
+              ✅ Titik GPS terkunci (${lat}, ${lng}) —
+              <a href="${mapsUrl}" target="_blank" class="underline text-blue-600 hover:text-blue-800">Cek Maps</a>
+            </span>`;
+          gpsBtn.disabled = false;
+        },
+        () => {
+          applyFallbackLocation();
+        },
+        { timeout: 6000 }
+      );
+    }
+
+    // Fallback location if browser blocks GPS inside iframe/preview
+    function applyFallbackLocation() {
+      const statusEl = document.getElementById('gpsStatus');
+      const gpsBtn = document.getElementById('gpsBtn');
+      const gpsLinkInput = document.getElementById('gpsLink');
+
+      // Default Semarang area coordinates as fallback demo
+      const fallbackUrl = `https://www.google.com/maps?q=-6.9932,110.4203`;
+      gpsLinkInput.value = fallbackUrl;
+
+      statusEl.innerHTML = `
+        <span class="text-amber-700 font-semibold">
+          📍 Izin GPS browser dibatasi — Menggunakan pin area lokal default (<a href="${fallbackUrl}" target="_blank" class="underline text-blue-600">Lihat Pin</a>). Pastikan detail alamat tertulis jelas.
+        </span>`;
+      gpsBtn.disabled = false;
+    }
+
+    // Handle Form Submission & Show WhatsApp Confirmation Modal
+    function handleOrderSubmit(e) {
+      e.preventDefault();
+
+      // Nomor WhatsApp Admin (+62 882-2975-0605)
+      const adminPhone = "6288229750605";
+
+      const name = document.getElementById('custName').value.trim();
+      const packageVal = document.getElementById('packageSelect').value;
+      const [pkgName] = packageVal.split('|');
+      const qty = document.getElementById('itemQty').value;
+      const payment = document.getElementById('paymentMethod').value;
+      const address = document.getElementById('custAddress').value.trim();
+      const gpsLink = document.getElementById('gpsLink').value;
+      const estTime = document.getElementById('estTimeOutput').innerText;
+      const estPrice = document.getElementById('estPriceOutput').innerText;
+
+      let plainMessage =
+`Halo *KlinKicks.id*, saya mau order penjemputan laundry:
+
+👤 *Nama:* ${name}
+👟 *Paket:* ${pkgName} (${qty} item)
+💰 *Estimasi Biaya:* ${estPrice}
+⏱️ *Estimasi Selesai:* ${estTime}
+💳 *Pembayaran:* ${payment}
+📍 *Alamat:* ${address}`;
+
+      if (gpsLink) {
+        plainMessage += `\n🗺️ *Pin Lokasi GPS:* ${gpsLink}`;
+      }
+
+      plainMessage += `\n\nMohon konfirmasi jadwal penjemputan kurir ya. Terima kasih!`;
+
+      const waUrl = `https://wa.me/${adminPhone}?text=${encodeURIComponent(plainMessage)}`;
+
+      // Populate & open preview modal
+      document.getElementById('waPreviewText').innerText = plainMessage;
+      document.getElementById('waDirectLink').href = waUrl;
+
+      const modal = document.getElementById('waModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('waModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function copyOrderText() {
+      const text = document.getElementById('waPreviewText').innerText;
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+
+      const copyBtn = document.getElementById('copyBtn');
+      const originalHtml = copyBtn.innerHTML;
+      copyBtn.innerHTML = `<span class="text-emerald-700">✓ Tersalin!</span>`;
+      setTimeout(() => {
+        copyBtn.innerHTML = originalHtml;
+      }, 2000);
+    }
+
+    // Initialize on load
+    updateLiveHero();
+    setInterval(updateLiveHero, 1000);
+    calculateEstimate();
+  </script>
+</body>
+</html>
